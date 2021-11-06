@@ -34,6 +34,7 @@
 
     var player;
     var platforms;
+    var cursors;
 
     var game = new Phaser.Game(config);
 
@@ -84,6 +85,8 @@
             repeat: -1
         });
 
+        cursors = this.input.keyboard.createCursorKeys();
+
         this.physics.add.collider(player, platforms);
     }
 
@@ -112,7 +115,6 @@
         {
             player.setVelocityY(-330);
         }
-
     }
 
 </script>
